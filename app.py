@@ -7,7 +7,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 from werkzeug.utils import secure_filename
 from flask import send_from_directory
-import eventlet
 
 
 class message:
@@ -38,7 +37,6 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 socketio = SocketIO(app)
 socketio.init_app(app)
 
-eventlet.monkey_patch()
 
 
 app.config["SESSION_PERMANENT"] = False
