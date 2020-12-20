@@ -35,7 +35,7 @@ app = Flask(__name__)
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 socketio = SocketIO(app)
-socketio.init_app(app, cors_allowed_origins="*")
+socketio.init_app(app)
 
 
 app.config["SESSION_PERMANENT"] = False
