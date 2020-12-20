@@ -3,3 +3,4 @@ Flask
 Flask-SocketIO
 Pillow
 gunicorn
+flask-session
