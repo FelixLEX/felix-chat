@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block title %}
+Login
+{% endblock %}
+{% block body %}
+<link rel="stylesheet" href="../static/login_style.css">
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('#new_user').onsubmit = () => {
+            const request = new XMLHttpRequest();
+            const username = document.querySelector('#username').value;
+
+            request.open('POST', '/add_user');
+
+            request.onload = () => {
+                const data = JSON.parse(request.responseText);
+            
+
+            if (data.success) {
+                window.location.href = "/";
+            }
+            else {
+                document.querySelector('#result').innerHTML = 'This name is already in use.';
+            }
+            }
+
+            const data = new FormData();
+            data.append("username", username)
+
+            request.send(data)
+            return false;         
+        }
+    })
+</script>
+
+<div class="login_form">
+    <h3>To get started enter a name</h3>
+    <div class="name_submission">
+    <form id ="new_user">
+        <input id="username" class="form_text" type="name" placeholder="nickname">
+        <input class="sub_button" type="submit">
+    </form>
+    </div>
+    <div class="error_message" id="result"></div>
+</div>
+
+{% endblock %}

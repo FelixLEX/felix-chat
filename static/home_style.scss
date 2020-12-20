@@ -1,0 +1,97 @@
+body, html{
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    height: inherit;
+}
+
+.channels_list{
+    width: 5%;
+    padding: 10px;
+    position: relative;
+    left: 0;
+    height: 100%;
+    border-right: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.server{
+    width: 100%;
+    margin-top: 10px;
+    img{
+        display: block;
+        width: 100%;
+        border-radius: 50%;
+    }
+}
+
+.user{
+    height: 100px;
+    width: 100%;
+    margin: 10px 0;
+    img{
+        display: block;
+        width: 100%;
+        border-radius: 50%;
+    }
+}
+
+
+.users_container{
+    position: absolute;
+    right: 0;
+    width: 15%;
+    height: 100%;
+    border-left: 1px solid;
+}
+
+.messages_frame{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.send_message{
+    margin: 0 10px;
+    form{
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .message_text{
+            height: 30px;
+            width: 85%;
+        }
+        .submit_message{
+            height: 35px;
+            width: 10%
+        }
+    }
+}
+
+.received_messages{
+    overflow: auto;
+    margin: 10px;
+    white-space: normal;
+}
+
+.message_author{
+
+}
+
+.message{
+    display: inline-block;
+    margin: 7px;
+    font-size: 20px;
+    padding: 5px;
+    background-color: #ffe693;
+    border-radius: 8px;
+}

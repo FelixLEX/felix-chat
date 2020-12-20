@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% block title %}
+Home
+{% endblock %}
+{% block body %}
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+<script src="{{url_for('static', filename='send_message.js')}}"></script>
+<link rel="stylesheet" href="../static/home_style.css">
+<div class="container">
+        <div class="channels_list">
+            <div class="channels_container">
+            <a href="#" class="server_link" id="serverl" data-chname="channel1">
+                <div class="server">
+                    <img src="static/images/new.png" alt="">
+                </div>
+            </a>
+            <a class="server_link" href="#">
+                <div class="server">
+                    <img src="static/images/new.png" alt="">
+                </div>
+            </a>
+            <a class="server_link" href="#">
+                <div class="server">
+                    <img src="static/images/new.png" alt="">
+                </div>
+            </a>
+            {% for channel in channels %}
+            <a class="server_link" href="#" data-chname="{{channel.name}}">
+                <div class="server">
+                    <img src="static/channel_covers/{{channel.cover_name}}" alt="">
+                </div>
+            </a>
+            {% endfor %}
+            <a href="{{url_for('register_channel')}}">
+                <div class="server">
+                    <img src="static/images/plus_sign.png" alt="">
+                </div>
+            </a>
+            </div>
+            <div class="user_container">
+                <span style="text-align: center;">Hey, {{username}}</span>
+                <div class="user">
+                    <img src="static/images/user.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="messages_frame">
+            <div class="received_messages" id="messages_container">
+                <div class="message_box">
+                    <span class="message_author">Felix :</span>
+                    <span class="message">lalaalagfds gfsdgdfgdsfgsdfg fsdgfsdfgsfdgsdfl</span>
+                </div>
+                <div class="message_box">
+                    <span class="message_author">Felix :</span>
+                    <span class="message">lalaalag fdsgfsdgdfgdsfgsdf fsdgfsdfgsfdgsdfl</span>
+                </div>
+                <div class="message_box">
+                    <span class="message_author">Felix :</span>
+                    <span class="message">lalaalagfdsg fsdgdfgdsfgsdfgfsd gfsdfgsfdgsdfl</span>
+                </div>
+            </div>
+            <div class="send_message">
+                <form id="message_form"action="">
+                    <input id="message_text" class="message_text" type="text">
+                    <input class="submit_message" type="submit" value="Send" name="" id="send_message">
+                </form>
+            </div>
+        </div>
+
+        <div class="users_container">
+
+        </div>
+</div>
+{% endblock %}

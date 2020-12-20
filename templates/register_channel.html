@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %}
+Create channel
+{% endblock %}
+{% block body %}
+<link rel="stylesheet" href="../static/login_style.css">
+
+<script>
+
+</script>
+
+<div class="login_form">
+    <h3>To get started enter a name</h3>
+    <div class="name_submission channel">
+    <form action="{{url_for('add_channel')}}" enctype=multipart/form-data id="new_channel" class="channel" method="POST">
+        <label for="channel_name">Channel name</label>
+        <input id="channel_name" class="form_text" type="name" placeholder="Name" name="channel_name" required>
+        <div class="error_message" id="name_err"></div>
+        <label for="upload_img">Select an image for the server</label>
+        <input class="up_image" id="upload_img" type="file" accept=".jpg,.png,.jpeg" name="file">
+        <input class="sub_button" type="submit">
+    </form>
+    </div>
+    <div class="error_message" id="result"></div>
+</div>
+{% endblock %}

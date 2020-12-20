@@ -1,0 +1,86 @@
+.login_form{
+    color: #fff;
+    max-width: 35%;
+    background-color: #5983fc;
+    margin: 0 auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.name_submission{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+@media(max-width : 1200px){
+    .login_form{
+        max-width: 50%;
+    }
+}
+
+@media(max-width : 767px){
+    .login_form{
+        max-width: 90%;
+    }
+}
+
+h3, h4{
+    text-align: center;
+    font-family: Helvetica, "Open Sans", sans-serif;
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.form_text{
+    padding: 10px;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    width: 60%;
+    background-color: #3e60c1;
+    &:focus{
+        outline-style: inherit;
+        outline-width: 1px;
+        outline-offset: 0px;
+        background-color: #5e7bca;
+    }
+    &::placeholder{
+        color: #fff;
+    }
+}
+
+
+.sub_button{
+    border: none;
+    color: #fff;
+    background-color: #293556;
+    width: 25%;
+    height: 40px;
+    border-radius: 5px;
+    &:hover{
+        background-color: #192135;
+        cursor: pointer;
+    }
+}
+
+.error_message{
+    margin: 10px 0 0 30px;
+    color: #ff4848;
+    font-weight: 500;
+    font-family: Helvetica, "Open Sans", sans-serif;
+}
+
+.channel{
+    display: block;
+    font-size: 16px;
+    font-family: Helvetica, "Open Sans", sans-serif;
+    input{
+        margin: 10px 0;
+    }
+}
