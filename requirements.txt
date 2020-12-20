@@ -1,9 +1,9 @@
 sqlalchemy
 Pillow
-Flask==1.1.1
+Flask
 Flask-Session
 Flask-SocketIO
-gunicorn==18.0.0
+gunicorn
 eventlet
 requests
 Werkzeug
