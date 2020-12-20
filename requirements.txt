@@ -2,6 +2,5 @@ sqlalchemy
 Flask
 Flask-SocketIO
 Pillow
-gunicorn
+gunicorn==18.0.0
 flask-session
-eventlet
