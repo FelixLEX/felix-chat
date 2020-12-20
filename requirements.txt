@@ -4,3 +4,4 @@ Flask-SocketIO
 Pillow
 gunicorn
 flask-session
+eventlet
