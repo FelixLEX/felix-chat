@@ -3,5 +3,5 @@ Flask
 Flask-SocketIO
 Pillow
 gunicorn==18.0.0
-flask-session
+Flask-Session==0.3.1
 eventlet==0.25.1
