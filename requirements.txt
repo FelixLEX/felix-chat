@@ -4,3 +4,4 @@ Flask-SocketIO
 Pillow
 gunicorn==18.0.0
 flask-session
+eventlet==0.25.1
