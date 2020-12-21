@@ -1,3 +1,3 @@
-# Project 2
+# felix-chat
 
-Web Programming with Python and JavaScript
+This is a simple chatting app with channels.
